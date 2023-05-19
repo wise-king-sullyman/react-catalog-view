@@ -9,7 +9,5 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: release-test-branch
       - name: Release to NPM
         run: cd release-config-test && npx semantic-release@19.0.5
