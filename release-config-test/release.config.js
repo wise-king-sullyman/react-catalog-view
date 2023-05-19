@@ -4,6 +4,9 @@ module.exports = {
     { name: 'main', channel: 'alpha', prerelease: 'alpha' },
     { name: 'release-test', channel: 'test', prerelease: 'test' },
   ],
+  analyzeCommits: {
+    preset: 'angular'
+  },
   plugins: [
     [
       '@semantic-release/commit-analyzer',
@@ -11,7 +14,7 @@ module.exports = {
         preset: 'angular',
         releaseRules: [
           { type: 'chore', scope: 'CI-release', release: 'patch' },
-          { type: 'chore', scope: 'CI-breaking', release: 'breaking' }
+          { type: 'chore', scope: 'CI-breaking', release: 'major' }
         ]
       }
     ],
