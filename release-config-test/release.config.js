@@ -1,6 +1,7 @@
 module.exports = {
   branches: [
-    { name: 'refs/pull/4/merge', channel: 'prerelease' }
+    { name: 'v4', channel: 'prerelease' },
+    { name: 'release-test-2', channel: 'alpha', prerelease: 'alpha' },
   ],
   analyzeCommits: {
     preset: 'angular'
